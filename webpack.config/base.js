@@ -10,6 +10,7 @@ module.exports = {
   resolve: {
     // 设置别名方便引用
     alias: {
+      vue: 'vue/dist/vue.js',
       components: path.join(root, 'src/components'),
       views: path.join(root, 'src/views'),
       styles: path.join(root, 'src/styles'),
@@ -33,7 +34,8 @@ module.exports = {
           {
             loader: 'babel-loader'
           }
-        ]
+        ],
+        exclude: /node_modules/
       }
     ]
   }
